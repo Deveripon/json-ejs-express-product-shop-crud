@@ -31,9 +31,11 @@ export const createStudent = async (req, res) => {
     sendSms("rcvhoqrAmkxEWrfyYIKQ", "8809617612985", req.body.cell, "this is testing message");
     //upload photo to Cloud
     let gallUrl = [];
-    for (let i = 0; i < req.files.length; i++) {
-        let fileUrl = await uploadFile(req.files[i].path);
-        gallUrl.push(fileUrl);
+    if (req.files.length > 0) {
+        for (let i = 0; i < req.files.length; i++) {
+            let fileUrl = await uploadFile(req.files[i].path);
+            gallUrl.push(fileUrl);
+        }
     }
 
     //generate random unique id
@@ -75,9 +77,11 @@ export const updateStudent = async (req, res) => {
     const { name, age, cell, email, gender } = req.body;
 
     let gallUrl = [];
-    for (let i = 0; i < req.files.length; i++) {
-        let url = await uploadFile(req.files[i].path);
-        gallUrl.push(url);
+    if (req.files.length > 0) {
+        for (let i = 0; i < req.files.length; i++) {
+            let url = await uploadFile(req.files[i].path);
+            gallUrl.push(url);
+        }
     }
 
     //get all data from json db

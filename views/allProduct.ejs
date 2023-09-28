@@ -10,13 +10,16 @@
         </div>
     </div>
 </div>
+
 <div class="mx-5">
-    <a href="/products/add-new" class="add-product mt-4 mb-3 btn btn-rounded btn-success">Add New Item</a>
+    <a href="/products/add-new" class="add-product mt-4 mb-3 btn btn-rounded btn-success"
+        >Add New Item</a
+    >
     <div class="row">
         <div class="col-12">
             <table class="table table-striped" id="myTable">
                 <thead>
-                    <tr style=" vertical-align: middle;">
+                    <tr style="vertical-align: middle">
                         <th>Photo</th>
                         <th>Product Name</th>
                         <th>Category</th>
@@ -28,83 +31,27 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr style="vertical-align: middle;">
-                        <td>
-                            <img
-                                style="height: 50px; width: 50px"
-                                src="/assets/images/unnamed.jpg"
-                                alt="" />
-                        </td>
-                        <td>Product Name Lorem ipsum dolor sit amet.</td>
-                        <td>Category</td>
-                        <td>SKU</td>
-                        <td>Stock</td>
-                        <td>Reguler Price</td>
-                        <td>Sale Price</td>
-                        <td>
-                            <a class="btn btn-success" href="products/single/jhdff"><i class="ri-eye-line"></i> View</a>
-                            <a class="btn btn-info" href="/products/edit/yufdfd"><i class="ri-edit-line"></i> Edit</a>
-                            <a class="btn btn-danger" href="#"><i class="ri-delete-bin-line""></i> Delete</a>
-                        </td>
-                    </tr>
-                    <tr style="vertical-align: middle;">
-                        <td>
-                            <img
-                                style="height: 50px; width: 50px"
-                                src="/assets/images/unnamed.jpg"
-                                alt="" />
-                        </td>
-                        <td>Product Name Lorem ipsum dolor sit amet.</td>
-                        <td>Category</td>
-                        <td>SKU</td>
-                        <td>Stock</td>
-                        <td>Reguler Price</td>
-                        <td>Sale Price</td>
-                        <td>
-                            <a class="btn btn-success" href="products/single/jhdff"><i class="ri-eye-line"></i> View</a>
-                            <a class="btn btn-info" href="/products/edit/yufdfd"><i class="ri-edit-line"></i> Edit</a>
-                            <a class="btn btn-danger" href="#"><i class="ri-delete-bin-line""></i> Delete</a>
-                        </td>
-                    </tr>
-                    <tr style="vertical-align: middle;">
-                        <td>
-                            <img
-                                style="height: 50px; width: 50px"
-                                src="/assets/images/unnamed.jpg"
-                                alt="" />
-                        </td>
-                        <td>Product Name Lorem ipsum dolor sit amet.</td>
-                        <td>Category</td>
-                        <td>SKU</td>
-                        <td>Stock</td>
-                        <td>Reguler Price</td>
-                        <td>Sale Price</td>
-                        <td>
-                            <a class="btn btn-success" href="products/single/jhdff"><i class="ri-eye-line"></i> View</a>
-                            <a class="btn btn-info" href="/products/edit/yufdfd"><i class="ri-edit-line"></i> Edit</a>
-                            <a class="btn btn-danger" href="#"><i class="ri-delete-bin-line""></i> Delete</a>
-                        </td>
-                    </tr>
-                    <tr style="vertical-align: middle;">
-                        <td>
-                            <img
-                                style="height: 50px; width: 50px"
-                                src="/assets/images/unnamed.jpg"
-                                alt="" />
-                        </td>
-                        <td>Product Name Lorem ipsum dolor sit amet.</td>
-                        <td>Category</td>
-                        <td>SKU</td>
-                        <td>Stock</td>
-                        <td>Reguler Price</td>
-                        <td>Sale Price</td>
-                        <td>
-                            <a class="btn btn-success" href="products/single/jhdff"><i class="ri-eye-line"></i> View</a>
-                            <a class="btn btn-info" href="/products/edit/yufdfd"><i class="ri-edit-line"></i> Edit</a>
-                            <a class="btn btn-danger" href="#"><i class="ri-delete-bin-line""></i> Delete</a>
-                        </td>
-                    </tr>
-                 
+                    <% products.forEach(item => { %>
+                        <tr style="vertical-align: middle;">
+                            <td>
+                                <img
+                                    style="height: 50px; width: 50px"
+                                    src="/assets/images/unnamed.jpg"
+                                    alt="" />
+                            </td>
+                            <td>Product Name Lorem ipsum dolor sit amet.</td>
+                            <td>Category</td>
+                            <td>SKU</td>
+                            <td>Stock</td>
+                            <td>Reguler Price</td>
+                            <td>Sale Price</td>
+                            <td>
+                                <a class="btn btn-success" href="products/single/jhdff"><i class="ri-eye-line"></i> View</a>
+                                <a class="btn btn-info" href="/products/edit/yufdfd"><i class="ri-edit-line"></i> Edit</a>
+                                <a class="btn btn-danger" href="#"><i class="ri-delete-bin-line""></i> Delete</a>
+                            </td>
+                        </tr>
+                        <% }) %>
                 </tbody>
             </table>
         </div>

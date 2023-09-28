@@ -12,9 +12,7 @@ import { studentPhotoUpload } from "../utils/multerUploader.js";
 import { getDasboard, getHomePage } from "../controllers/ejsStudentPageControllers.js";
 const studentRouter = express.Router();
 
-//ejs page routes
-studentRouter.get("/", getHomePage);
-studentRouter.get("/dashboard", getDasboard);
+
 
 //API ROUTERS FOR STUDENT DATA CRUD
 //make student router

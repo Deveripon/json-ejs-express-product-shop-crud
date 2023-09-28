@@ -3,7 +3,7 @@ import sendSms from "bulkmessage";
 import fs from "fs";
 import path from "path";
 import { deleteFromCloud, uploadFile } from "../utils/cloudinary.js";
-import { getUniqueId } from "../helpers/uniqueId.js";
+import { getUniqueId } from "../helpers/helpers.js";
 
 //get all student
 export const getAllStudent = (req, res) => {

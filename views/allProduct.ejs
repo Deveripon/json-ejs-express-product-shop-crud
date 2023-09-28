@@ -34,21 +34,22 @@
                     <% products.forEach(item => { %>
                         <tr style="vertical-align: middle;">
                             <td>
+                                
                                 <img
                                     style="height: 50px; width: 50px"
-                                    src="/assets/images/unnamed.jpg"
+                                    src="/assets/productPhoto/<%= item.featuredPhoto%>"
                                     alt="" />
                             </td>
-                            <td>Product Name Lorem ipsum dolor sit amet.</td>
-                            <td>Category</td>
-                            <td>SKU</td>
-                            <td>Stock</td>
-                            <td>Reguler Price</td>
-                            <td>Sale Price</td>
+                            <td><%= item.productName %></td>
+                            <td><%= item.category %></td>
+                            <td>SK-BD <%= item.sku %></td>
+                            <td><%= item.stock %></td>
+                            <td> $ <%= item.regulerPrice %></td>
+                            <td> $ <%= item.salePrice %></td>
                             <td>
-                                <a class="btn btn-success" href="products/single/jhdff"><i class="ri-eye-line"></i> View</a>
-                                <a class="btn btn-info" href="/products/edit/yufdfd"><i class="ri-edit-line"></i> Edit</a>
-                                <a class="btn btn-danger" href="#"><i class="ri-delete-bin-line""></i> Delete</a>
+                                <a class="btn btn-success" href="products/single/<%= item.slug %>"><i class="ri-eye-line"></i> View</a>
+                                <a class="btn btn-info" href="/products/edit/<%= item.id %>"><i class="ri-edit-line"></i> Edit</a>
+                                <a class="btn btn-danger" href="/products/delete/<%= item.id %>"><i class="ri-delete-bin-line""></i> Delete</a>
                             </td>
                         </tr>
                         <% }) %>

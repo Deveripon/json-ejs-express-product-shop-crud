@@ -19,7 +19,7 @@
 
     <div class="row">
         <div class="col-8">
-            <form action="">
+            <form action="/products/edit/<%= product.id %>" method="POST" enctype="multipart/form-data">
                 <div class="d-flex">
                     <div class="col-6">
                         <div class="from-group my-2">
@@ -30,16 +30,41 @@
                                 name="vendor"
                                 id="vendor">
                                 <option value="">--Select Vendor--</option>
-                                <option value="bata">Bata</option>
-                                <option value="apex">Apex</option>
-                                <option value="acme">Acme</option>
-                                <option value="rfl">RFL</option>
-                                <option value="denim">Denim</option>
+                                <option 
+                                <% if (product.vendor == "bata") { %>
+                                    selected
+                                   <% } %>
+                                value="bata">Bata</option>
+                                <option 
+                                <% if (product.vendor == "apex") { %>
+                                    selected
+                                   <% } %>
+                                value="apex">Apex</option>
+                                <option 
+                                <% if (product.vendor == "acme") { %>
+                                    selected
+                                   <% } %>
+                                value="acme">Acme</option>
+                                <option 
+                                <% if (product.vendor == "rfl") { %>
+                                    selected
+                                   <% } %>
+                                value="rfl">RFL</option>
+                                <option 
+                                <% if (product.vendor == "denim") { %>
+                                    selected
+                                   <% } %>
+                                value="denim">Denim</option>
                             </select>
                         </div>
                         <div class="form-group my-2">
-                            <label for="name">Product Name</label>
-                            <input class="form-control" type="text" name="name" id="name" />
+                            <label for="productName">Product Name</label>
+                            <input
+                                value="<%= product.productName %>"
+                                class="form-control"
+                                type="text"
+                                name="productName"
+                                id="productName" />
                         </div>
                         <div class="form-group my-2">
                             <label for="category">Product Category</label>
@@ -49,25 +74,54 @@
                                 name="category"
                                 id="category">
                                 <option value="">--Uncategorised--</option>
-                                <option value="clothings">Clothings</option>
-                                <option value="beauty">Beauty Products</option>
-                                <option value="gents">Gents</option>
-                                <option value="ladies">Ladies</option>
+                                <option 
+                                    <% if (product.category == "clothings") { %>
+                                     selected
+                                    <% } %>
+                                
+                                value="clothings">Clothings</option>
+                                <option
+                                <% if (product.category == "beauty") { %>
+                                    selected
+                                   <% } %>
+                                value="beauty">Beauty Products</option>
+                                <option 
+                                <% if (product.category == "gents") { %>
+                                    selected
+                                   <% } %>
+                                value="gents">Gents</option>
+                                <option
+                                <% if (product.category == "ladies") { %>
+                                    selected
+                                   <% } %>
+                                
+                                value="ladies">Ladies</option>
                             </select>
                         </div>
                         <div class="form-group my-2">
                             <label for="sku">SKU</label>
-                            <input class="form-control" type="text" name="sku" id="sku" />
+                            <input
+                                value="<%= product.sku %>"
+                                class="form-control"
+                                type="text"
+                                name="sku"
+                                id="sku" />
                         </div>
                         <div class="form-group my-2">
                             <label for="stock">Stock</label>
-                            <input class="form-control" type="text" name="stock" id="stock" />
+                            <input
+                                value="<%= product.stock %>"
+                                class="form-control"
+                                type="text"
+                                name="stock"
+                                id="stock" />
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="form-group my-2">
                             <label for="regulerPrice">Reguler Price</label>
                             <input
+                                value="<%= product.regulerPrice %>"
                                 class="form-control"
                                 type="text"
                                 name="regulerPrice"
@@ -76,6 +130,7 @@
                         <div class="form-group my-2">
                             <label for="salePrice">Sale Price</label>
                             <input
+                                value="<%= product.salePrice %>"
                                 class="form-control"
                                 type="text"
                                 name="salePrice"
@@ -102,11 +157,11 @@
                 </div>
                 <div class="form-group my-2">
                     <label for="productDetails">Product Details</label>
-                    <textarea
+                    <textarea                   
                         class="form-control"
                         name="productDetails"
                         id="productDetails"
-                        rows="10"></textarea>
+                        rows="10"><%= product.productDetails %></textarea>
                 </div>
 
                 <button class="btn btn-success mt-5 px-5" type="submit">
@@ -120,11 +175,13 @@
                     <h4>Featured Photo</h4>
                     <img
                         style="width: 200px; height: 200px; object-fit: cover; border-radius: 5px"
-                        src="/assets/images/unnamed.jpg"
+                        src="/assets/productPhoto/<%= product.featuredPhoto %>"
                         alt="" />
                 </div>
                 <div class="gallery-image-preview">
                     <h4>Gallery Images</h4>
+                    <% product.galleryImage.forEach(item => { %>
+
                     <img
                         style="
                             width: 200px;
@@ -133,38 +190,9 @@
                             object-fit: cover;
                             border-radius: 5px;
                         "
-                        src="/assets/images/unnamed.jpg"
+                        src="/assets/productPhoto/<%= item %>"
                         alt="" />
-                    <img
-                        style="
-                            width: 200px;
-                            height: 200px;
-                            margin: 2px;
-                            object-fit: cover;
-                            border-radius: 5px;
-                        "
-                        src="/assets/images/unnamed.jpg"
-                        alt="" />
-                    <img
-                        style="
-                            width: 200px;
-                            height: 200px;
-                            margin: 2px;
-                            object-fit: cover;
-                            border-radius: 5px;
-                        "
-                        src="/assets/images/unnamed.jpg"
-                        alt="" />
-                    <img
-                        style="
-                            width: 200px;
-                            height: 200px;
-                            margin: 2px;
-                            object-fit: cover;
-                            border-radius: 5px;
-                        "
-                        src="/assets/images/unnamed.jpg"
-                        alt="" />
+                    <% }) %>
                 </div>
             </div>
         </div>

@@ -1,0 +1,172 @@
+<div class="border border-bottom border-secondary-subtle shadow-sm">
+    <div class="mt-3 mx-5 pb-2">
+        <div class="d-flex justify-content-between">
+            <h2>Edit Products</h2>
+            <img
+                style="height: 50px; width: 50px"
+                class="rounded-circle"
+                src="/assets/images/unnamed.jpg"
+                alt="" />
+        </div>
+    </div>
+</div>
+<div class="mx-5">
+    <a href="/products" class="add-product mt-4 mb-3 btn btn-rounded btn-success"
+        >Go to all Products</a
+    >
+
+    <!-- product add from -->
+
+    <div class="row">
+        <div class="col-8">
+            <form action="">
+                <div class="d-flex">
+                    <div class="col-6">
+                        <div class="from-group my-2">
+                            <label for="vendor">Select Vendor</label>
+                            <select
+                                style="width: 300px"
+                                class="form-control"
+                                name="vendor"
+                                id="vendor">
+                                <option value="">--Select Vendor--</option>
+                                <option value="bata">Bata</option>
+                                <option value="apex">Apex</option>
+                                <option value="acme">Acme</option>
+                                <option value="rfl">RFL</option>
+                                <option value="denim">Denim</option>
+                            </select>
+                        </div>
+                        <div class="form-group my-2">
+                            <label for="name">Product Name</label>
+                            <input class="form-control" type="text" name="name" id="name" />
+                        </div>
+                        <div class="form-group my-2">
+                            <label for="category">Product Category</label>
+                            <select
+                                style="width: 300px"
+                                class="form-control"
+                                name="category"
+                                id="category">
+                                <option value="">--Uncategorised--</option>
+                                <option value="clothings">Clothings</option>
+                                <option value="beauty">Beauty Products</option>
+                                <option value="gents">Gents</option>
+                                <option value="ladies">Ladies</option>
+                            </select>
+                        </div>
+                        <div class="form-group my-2">
+                            <label for="sku">SKU</label>
+                            <input class="form-control" type="text" name="sku" id="sku" />
+                        </div>
+                        <div class="form-group my-2">
+                            <label for="stock">Stock</label>
+                            <input class="form-control" type="text" name="stock" id="stock" />
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group my-2">
+                            <label for="regulerPrice">Reguler Price</label>
+                            <input
+                                class="form-control"
+                                type="text"
+                                name="regulerPrice"
+                                id="regulerPrice" />
+                        </div>
+                        <div class="form-group my-2">
+                            <label for="salePrice">Sale Price</label>
+                            <input
+                                class="form-control"
+                                type="text"
+                                name="salePrice"
+                                id="salePrice" />
+                        </div>
+                        <div class="form-group my-2">
+                            <label for="featuredPhoto">Featured Photo</label>
+                            <input
+                                class="form-control"
+                                type="file"
+                                name="featuredPhoto"
+                                id="featuredPhoto" />
+                        </div>
+                        <div class="form-group my-2">
+                            <label for="galleryImage">Gallery Image</label>
+                            <input
+                                class="form-control"
+                                type="file"
+                                multiple
+                                name="galleryImage"
+                                id="galleryImage" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group my-2">
+                    <label for="productDetails">Product Details</label>
+                    <textarea
+                        class="form-control"
+                        name="productDetails"
+                        id="productDetails"
+                        rows="10"></textarea>
+                </div>
+
+                <button class="btn btn-success mt-5 px-5" type="submit">
+                    <i class="ri-check-double-line"></i> Update
+                </button>
+            </form>
+        </div>
+        <div class="col-4">
+            <div class="image-preview-section">
+                <div class="featured-image-preview">
+                    <h4>Featured Photo</h4>
+                    <img
+                        style="width: 200px; height: 200px; object-fit: cover; border-radius: 5px"
+                        src="/assets/images/unnamed.jpg"
+                        alt="" />
+                </div>
+                <div class="gallery-image-preview">
+                    <h4>Gallery Images</h4>
+                    <img
+                        style="
+                            width: 200px;
+                            height: 200px;
+                            margin: 2px;
+                            object-fit: cover;
+                            border-radius: 5px;
+                        "
+                        src="/assets/images/unnamed.jpg"
+                        alt="" />
+                    <img
+                        style="
+                            width: 200px;
+                            height: 200px;
+                            margin: 2px;
+                            object-fit: cover;
+                            border-radius: 5px;
+                        "
+                        src="/assets/images/unnamed.jpg"
+                        alt="" />
+                    <img
+                        style="
+                            width: 200px;
+                            height: 200px;
+                            margin: 2px;
+                            object-fit: cover;
+                            border-radius: 5px;
+                        "
+                        src="/assets/images/unnamed.jpg"
+                        alt="" />
+                    <img
+                        style="
+                            width: 200px;
+                            height: 200px;
+                            margin: 2px;
+                            object-fit: cover;
+                            border-radius: 5px;
+                        "
+                        src="/assets/images/unnamed.jpg"
+                        alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
